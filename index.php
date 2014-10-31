@@ -16,10 +16,10 @@
 </style>
 </head>
 <head>
-		<form  method="post" action="search.php?go"  id="searchform"> 
-	    <input  type="text" name="name"> 
-	    <input  type="submit" name="submit" value="Search"> 
-	    </form> 
+		<form method="post" action="search.php">
+		<input type="text" name="search" />
+		<input type="submit" name="submit"  value="  Search   ">
+		</form>
 <body>
 <h1>Register here!</h1>
 <p>Fill in your name, email address and company name, then click <strong>Submit</strong> to register.</p>

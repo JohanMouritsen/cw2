@@ -13,17 +13,20 @@ $sql="SELECT * FROM registration_tbl
 		OR date LIKE '%$search%' 
 		ORDER by name ASC";
 //-run  the query against the mysql query function 
-$result=mysql_query($sql);
+$result=mysql_query($sql, $db);
 $number=mysql_num_rows($result);
 $pageTitle="Search Results";
  
+
 //-create  while loop and loop through result set 
 while($row=mysql_fetch_array($result)){ 
         $name  =$row['name']; 
         $email =$row['email']; 
         $company =$row['company']; 
-        $date =$row['date']; }
+        $date =$row['date']; 
 //-display the result of the array 
-print "
-<td><strong> $name $email $company $date </strong><vr />";
+print " <tr>
+<td><strong> $name $email $company $date </strong><br /></td>";
+}
+
 ?> 
